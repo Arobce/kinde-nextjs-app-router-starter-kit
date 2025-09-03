@@ -26,6 +26,8 @@ export default async function RootLayout({
           <nav className="nav container">
             <h1 className="text-display-3">KindeAuth</h1>
             <div>
+                                  <Link href="http://myprefix.mycompany.localhost:3001/dashboard?prompt=none">Go to 3001 app</Link>
+
               {!(await isAuthenticated()) ? (
                 <>
                   <LoginLink className="btn btn-ghost sign-in-btn">
@@ -52,6 +54,7 @@ export default async function RootLayout({
                     <p className="text-heading-2">
                       {user?.given_name} {user?.family_name}
                     </p>
+
 
                     <LogoutLink className="text-subtle">Log out</LogoutLink>
                   </div>

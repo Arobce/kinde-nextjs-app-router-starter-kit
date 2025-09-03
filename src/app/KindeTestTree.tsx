@@ -1,13 +1,15 @@
 "use client";
 
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import KindeAuthItems from "./dashboard/components/KindeAuthItems";
 
 export function DeepestChild() {
-  const { user, isAuthenticated, isLoading } = useKindeBrowserClient();
+  const { user, isAuthenticated, isLoading, accessTokenRaw, accessToken } = useKindeBrowserClient();
   if (isLoading) return <div>Loading DeepestChild...</div>;
   return (
     <div style={{ border: "1px solid #eee", margin: 8, padding: 8 }}>
       <strong>DeepestChild:</strong> {isAuthenticated ? user?.email : "Not signed in"}
+      <KindeAuthItems />
     </div>
   );
 }
