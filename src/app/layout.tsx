@@ -26,7 +26,7 @@ export default async function RootLayout({
           <nav className="nav container">
             <h1 className="text-display-3">KindeAuth</h1>
             <div>
-                                  <Link href="http://myprefix.mycompany.localhost:3001/dashboard?prompt=none">Go to 3001 app</Link>
+                                  <Link href="https://projellio.roshanchapagain.com/dashboard?prompt=none">Go to 3001 app</Link>
 
               {!(await isAuthenticated()) ? (
                 <>
