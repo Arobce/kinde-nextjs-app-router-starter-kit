@@ -1,4 +1,6 @@
+
 import Link from "next/link";
+import KindeTestTree from "./KindeTestTree";
 
 export default function Home() {
   return (
@@ -17,6 +19,9 @@ export default function Home() {
         >
           Go to docs
         </Link>
+      </div>
+      <div style={{ marginTop: 32 }}>
+        <KindeTestTree />
       </div>
     </div>
   );
