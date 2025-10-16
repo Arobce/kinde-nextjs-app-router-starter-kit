@@ -3,6 +3,7 @@ import {
   RegisterLink,
   LoginLink,
   LogoutLink,
+  PortalLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
@@ -26,7 +27,9 @@ export default async function RootLayout({
           <nav className="nav container">
             <h1 className="text-display-3">KindeAuth</h1>
             <div>
-                                  <Link href="https://projellio.roshanchapagain.com/api/auth/login">Go to 3001 app</Link>
+              <PortalLink>
+                Account
+              </PortalLink>
 
               {!(await isAuthenticated()) ? (
                 <>
@@ -54,7 +57,6 @@ export default async function RootLayout({
                     <p className="text-heading-2">
                       {user?.given_name} {user?.family_name}
                     </p>
-
 
                     <LogoutLink className="text-subtle">Log out</LogoutLink>
                   </div>
