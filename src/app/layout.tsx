@@ -27,16 +27,25 @@ export default async function RootLayout({
           <nav className="nav container">
             <h1 className="text-display-3">KindeAuth</h1>
             <div>
-              <PortalLink>
-                Account
-              </PortalLink>
+              <PortalLink>Account</PortalLink>
 
               {!(await isAuthenticated()) ? (
                 <>
                   <LoginLink className="btn btn-ghost sign-in-btn">
                     Sign in
                   </LoginLink>
-                  <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
+                  <RegisterLink
+                    authUrlParams={{
+                      utm_source: "my source",
+                      utm_medium: "some medium",
+                      utm_campaign: "awesome campaign",
+                      utm_content: "something else",
+                      utm_term: "my terms",
+                    }}
+                    className="btn btn-dark"
+                  >
+                    Sign up
+                  </RegisterLink>
                 </>
               ) : (
                 <div className="profile-blob">
