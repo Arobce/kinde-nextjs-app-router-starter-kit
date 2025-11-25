@@ -7,6 +7,7 @@ export default withAuth(
   },
   {
     publicPaths: ["/", "/api/public", "/terms", "/privacy" ],
+    isReturnToCurrentPage: true,
   }
 );
 
