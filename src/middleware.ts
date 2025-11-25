@@ -6,7 +6,7 @@ export default withAuth(
   async function middleware(req: import('next/server').NextRequest) {
   },
   {
-    publicPaths: ["/", "/api/public"],
+    publicPaths: ["/", "/api/public", "terms", "privacy" ],
   }
 );
 
