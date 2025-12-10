@@ -31,7 +31,7 @@ export default async function RootLayout({
 
               {!(await isAuthenticated()) ? (
                 <>
-                  <LoginLink orgCode="org_8b36aa1a51a" className="btn btn-ghost sign-in-btn">
+                  <LoginLink className="btn btn-ghost sign-in-btn">
                     Sign in
                   </LoginLink>
                   <RegisterLink
