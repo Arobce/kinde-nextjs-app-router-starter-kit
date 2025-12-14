@@ -34,6 +34,9 @@ export default async function RootLayout({
                   <LoginLink  className="btn btn-ghost sign-in-btn">
                     Sign in
                   </LoginLink>
+                  <LoginLink orgCode="org_2a25db161bd" className="btn btn-ghost sign-in-btn" >
+                    Sign in with organization
+                  </LoginLink>
                   <RegisterLink
                     authUrlParams={{
                       utm_source: "my source",
