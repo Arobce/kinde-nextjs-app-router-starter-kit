@@ -31,20 +31,13 @@ export default async function RootLayout({
 
               {!(await isAuthenticated()) ? (
                 <>
-                  <LoginLink  className="btn btn-ghost sign-in-btn">
+                  <LoginLink className="btn btn-ghost sign-in-btn">
                     Sign in
                   </LoginLink>
-                  <LoginLink orgCode="org_2a25db161bd" className="btn btn-ghost sign-in-btn" >
+                  <LoginLink className="btn btn-ghost sign-in-btn" >
                     Sign in with organization
                   </LoginLink>
                   <RegisterLink
-                    authUrlParams={{
-                      utm_source: "my source",
-                      utm_medium: "some medium",
-                      utm_campaign: "awesome campaign",
-                      utm_content: "something else",
-                      utm_term: "my terms",
-                    }}
                     className="btn btn-dark"
                   >
                     Sign up
