@@ -5,7 +5,7 @@ export default withAuth(
   async function middleware(req: NextRequest) {
     const pathname = req.nextUrl.pathname;
 
-    if (pathname === "/dashboard" && !req.kindeAuth?.isAuthenticated) {
+    if (pathname === "/dashboard") {
       const loginUrl = new URL("/api/auth/login", req.url);
       loginUrl.searchParams.set("prompt", "none");
       loginUrl.searchParams.set("post_login_redirect_url", "/dashboard");
