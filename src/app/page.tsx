@@ -1,8 +1,11 @@
 
-import Link from "next/link";
 import KindeTestTree from "./KindeTestTree";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function Home() {
+  redirect("/api/auth/login");
+  
   
   return (
     <div className="container">
