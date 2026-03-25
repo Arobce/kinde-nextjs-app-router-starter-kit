@@ -54,8 +54,8 @@ export default async function RootLayout({
                 </>
               ) : (
                 <>
-                  <a href="https://kindetest2.roshanchapagain.com/dashboard">
-                    Go to App B
+                  <a href="https://kindetest2.roshanchapagain.com/applications">
+                    Go to Applications
                   </a>
 
                   <div className="profile-blob">
