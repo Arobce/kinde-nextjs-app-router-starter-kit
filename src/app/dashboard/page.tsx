@@ -1,5 +1,6 @@
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { redirect } from "next/navigation";
+// import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+// import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export default async function Dashboard() {
   // const { isAuthenticated, getUser } = getKindeServerSession();
@@ -15,7 +16,7 @@ export default async function Dashboard() {
           Your authentication is all sorted.
           <br />
           Build the important stuff.
-          <a href="/api/auth/login?prompt=none">
+          <Link href="/api/auth/login?prompt=none">
             Check Session
           </a>
         </p>
