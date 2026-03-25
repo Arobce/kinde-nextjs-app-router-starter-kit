@@ -28,6 +28,9 @@ export default async function RootLayout({
             <h1 className="text-display-3">KindeAuth</h1>
             <div>
               <PortalLink>Account</PortalLink>
+                <a href="https://kindetest2.roshanchapagain.com/applications">
+                    Go to Applications
+                  </a>
 
               {!(await isAuthenticated()) ? (
                 <>
@@ -54,10 +57,7 @@ export default async function RootLayout({
                 </>
               ) : (
                 <>
-                  <a href="https://kindetest2.roshanchapagain.com/applications">
-                    Go to Applications
-                  </a>
-
+                
                   <div className="profile-blob">
                   {user?.picture ? (
                     <img
