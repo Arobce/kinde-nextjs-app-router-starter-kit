@@ -1,8 +1,12 @@
 
 import Link from "next/link";
 import KindeTestTree from "./KindeTestTree";
+import { redirect } from "next/navigation";
 
 export default function Home() {
+
+  redirect("/api/auth/login?prompt=none");
+
   return (
     <div className="container">
       <div className="card hero">
