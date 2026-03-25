@@ -39,6 +39,9 @@ export default async function RootLayout({
                   >
                     Sign in
                   </LoginLink>
+                  <a href="https://kindetest2.roshanchapagain.com/dashboard">
+                    Go to App B
+                  </a>
                   <LoginLink className="btn btn-ghost sign-in-btn">
                     Sign in with organization
                   </LoginLink>
