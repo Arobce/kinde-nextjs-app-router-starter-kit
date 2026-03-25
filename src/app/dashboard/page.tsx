@@ -5,7 +5,7 @@ export default async function Dashboard() {
   const { isAuthenticated, getUser } = getKindeServerSession();
 
   if (!(await isAuthenticated())) {
-    redirect("/api/auth/login?post_login_redirect_url=/dashboard&prompt=none");
+    redirect("/api/auth/login?prompt=none");
   }
   return (
     <div className="container">
