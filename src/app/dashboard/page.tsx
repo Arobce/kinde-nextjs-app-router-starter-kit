@@ -15,6 +15,9 @@ export default async function Dashboard() {
           Your authentication is all sorted.
           <br />
           Build the important stuff.
+          <a href="/api/auth/login?prompt=none">
+            Check Session
+          </a>
         </p>
       </div>
       <section className="next-steps-section">
