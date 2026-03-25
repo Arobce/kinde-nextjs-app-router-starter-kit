@@ -39,9 +39,7 @@ export default async function RootLayout({
                   >
                     Sign in
                   </LoginLink>
-                  <a href="https://kindetest2.roshanchapagain.com/dashboard">
-                    Go to App B
-                  </a>
+                
                   <LoginLink className="btn btn-ghost sign-in-btn">
                     Sign in with organization
                   </LoginLink>
@@ -55,7 +53,12 @@ export default async function RootLayout({
                   </RegisterLink>
                 </>
               ) : (
-                <div className="profile-blob">
+                <>
+                  <a href="https://kindetest2.roshanchapagain.com/dashboard">
+                    Go to App B
+                  </a>
+
+                  <div className="profile-blob">
                   {user?.picture ? (
                     <img
                       className="avatar"
@@ -77,6 +80,8 @@ export default async function RootLayout({
                     <LogoutLink className="text-subtle">Log out</LogoutLink>
                   </div>
                 </div>
+                  </>
+                
               )}
             </div>
           </nav>
