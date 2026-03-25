@@ -1,4 +1,12 @@
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { redirect } from "next/navigation";
+
 export default function Dashboard() {
+  const { isAuthenticated, getUser } = getKindeServerSession();
+
+  if (!(await isAuthenticated())) {
+    redirect("/api/auth/login?post_login_redirect_url=/dashboard&prompt=none");
+  }
   return (
     <div className="container">
       <div className="card start-hero">
