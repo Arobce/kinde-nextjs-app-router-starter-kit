@@ -18,7 +18,7 @@ export default async function Dashboard() {
           Build the important stuff.
           <Link href="/api/auth/login?prompt=none">
             Check Session
-          </a>
+          </Link>
         </p>
       </div>
       <section className="next-steps-section">
