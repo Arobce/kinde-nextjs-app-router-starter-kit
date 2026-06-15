@@ -45,12 +45,9 @@ export default async function RootLayout({
                     Sign in (with organization)
                   </LoginLink>
                   <RegisterLink
-                     authUrlParams={{
-                      orgId: "org_5e8174698fcc",
-                    }}
                     className="btn btn-dark"
                   >
-                    Sign up with Org
+                    Sign up
                   </RegisterLink>
                 </>
               ) : (
