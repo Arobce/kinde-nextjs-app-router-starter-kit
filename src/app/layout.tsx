@@ -35,21 +35,22 @@ export default async function RootLayout({
               {!(await isAuthenticated()) ? (
                 <>
                   <LoginLink
-                    authUrlParams={{
-                      connectionId: "conn_01999225eeb1e2978db27ffa2d03fa36",
-                    }}
+                 
                     className="btn btn-ghost sign-in-btn"
                   >
                     Sign in
                   </LoginLink>
                 
                   <LoginLink className="btn btn-ghost sign-in-btn">
-                    Sign in with organization
+                    Sign in (with organization)
                   </LoginLink>
                   <RegisterLink
+                     authUrlParams={{
+                      orgId: "org_5e8174698fcc",
+                    }}
                     className="btn btn-dark"
                   >
-                    Sign up
+                    Sign up with Org
                   </RegisterLink>
                 </>
               ) : (
