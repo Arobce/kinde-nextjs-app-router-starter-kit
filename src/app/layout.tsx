@@ -39,9 +39,9 @@ export default async function RootLayout({
                   </LoginLink>
 
                   <LoginLink authUrlParams={{
-                    connection_id: "conn_01999225eeb1e2978db27ffa2d03fa36"
+                    connection_id: "conn_01999225eeb164a7cd68fa5b7e12da3d"
                   }} className="btn btn-ghost sign-in-btn">
-                    Sign in with username
+                    Sign in with email
                   </LoginLink>
 
                   <LoginLink
