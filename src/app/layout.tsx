@@ -28,55 +28,55 @@ export default async function RootLayout({
             <h1 className="text-display-3">KindeAuth</h1>
             <div>
               <PortalLink>Account</PortalLink>
-                <a href="https://kindetest2.roshanchapagain.com/applications">
-                    Go to Applications
-                  </a>
+              <a href="https://kindetest2.roshanchapagain.com/applications">
+                Go to Applications
+              </a>
 
               {!(await isAuthenticated()) ? (
                 <>
-                  <LoginLink
-                 
-                    className="btn btn-ghost sign-in-btn"
-                  >
+                  <LoginLink className="btn btn-ghost sign-in-btn">
                     Sign in
                   </LoginLink>
-                
-                  <LoginLink className="btn btn-ghost sign-in-btn">
+
+                  <LoginLink authUrlParams={{
+                    connection_id: "conn_01999225eeb1e2978db27ffa2d03fa36"
+                  }} className="btn btn-ghost sign-in-btn">
+                    Sign in with username
+                  </LoginLink>
+
+                  <LoginLink
+                    authUrlParams={{ orgCode: "org_8b36aa1a51a" }}
+                    className="btn btn-ghost sign-in-btn"
+                  >
                     Sign in (with organization)
                   </LoginLink>
-                  <RegisterLink
-                    className="btn btn-dark"
-                  >
-                    Sign up
-                  </RegisterLink>
+                  <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
                 </>
               ) : (
                 <>
-                
                   <div className="profile-blob">
-                  {user?.picture ? (
-                    <img
-                      className="avatar"
-                      src={user?.picture}
-                      alt="user profile avatar"
-                      referrerPolicy="no-referrer"
-                    />
-                  ) : (
-                    <div className="avatar">
-                      {user?.given_name?.[0]}
-                      {user?.family_name?.[0]}
-                    </div>
-                  )}
-                  <div>
-                    <p className="text-heading-2">
-                      {user?.given_name} {user?.family_name}
-                    </p>
+                    {user?.picture ? (
+                      <img
+                        className="avatar"
+                        src={user?.picture}
+                        alt="user profile avatar"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (
+                      <div className="avatar">
+                        {user?.given_name?.[0]}
+                        {user?.family_name?.[0]}
+                      </div>
+                    )}
+                    <div>
+                      <p className="text-heading-2">
+                        {user?.given_name} {user?.family_name}
+                      </p>
 
-                    <LogoutLink className="text-subtle">Log out</LogoutLink>
+                      <LogoutLink className="text-subtle">Log out</LogoutLink>
+                    </div>
                   </div>
-                </div>
-                  </>
-                
+                </>
               )}
             </div>
           </nav>
@@ -93,7 +93,7 @@ export default async function RootLayout({
             </p>
 
             <small className="text-subtle">
-              © 2023 KindeAuth, Inc. All rights reserved
+              © 2023 Inc. All rights reserved
             </small>
           </div>
         </footer>
